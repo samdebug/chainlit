@@ -50,7 +50,7 @@ export default function UserMenu({ anchorEl, open, handleClose }: Props) {
       <ListItemIcon>
         <SettingsIcon fontSize="small" />
       </ListItemIcon>
-      <ListItemText>Settings</ListItemText>
+      <ListItemText>设置</ListItemText>
       <Typography variant="body2" color="text.secondary">
         S
       </Typography>

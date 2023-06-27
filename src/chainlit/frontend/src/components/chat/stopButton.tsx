@@ -25,7 +25,7 @@ export default function StopButton() {
         variant="contained"
         onClick={handleClick}
       >
-        Stop task
+        终止提问
       </GreyButton>
     </Box>
   );

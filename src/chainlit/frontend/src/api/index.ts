@@ -4,10 +4,17 @@ import { Role } from 'state/user';
 // export const serverUrl = new URL('http://127.0.0.1:8000');
 const serverUrl = new URL(window.origin);
 
-const httpEndpoint = `${serverUrl.protocol}//${serverUrl.host}`;
+//区分是否生产环境
+const apiPrefix = import.meta.env.DEV ? '':'/api'
+const httpEndpoint = `${serverUrl.protocol}//${serverUrl.host}${apiPrefix}`;
 export const wsEndpoint = `${
   serverUrl.protocol === 'https:' ? 'wss' : 'ws'
-}://${serverUrl.host}`;
+}://${serverUrl.host}${apiPrefix}`;
+// 本地运行
+// const httpEndpoint = `http://172.16.21.206:8000`;
+// export const wsEndpoint = `${
+//   serverUrl.protocol === 'https:' ? 'wss' : 'ws'
+// }://172.16.21.206:8000`;
 
 export const getProjectSettings = async () => {
   const res = await fetch(`${httpEndpoint}/project/settings`, {

@@ -44,8 +44,8 @@ export default function DetailsButton({
 
   const text = loading
     ? tool
-      ? `Using ${tool}`
-      : 'Running'
+      ? `正在使用 ${tool}`
+      : '提问中'
     : `Took ${stepCount} step${stepCount <= 1 ? '' : 's'}`;
 
   let id = '';

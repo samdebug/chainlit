@@ -86,7 +86,7 @@ const Chat = () => {
       >
         <Box my={1} />
         {session?.error && (
-          <Alert severity="error">Could not reach the server.</Alert>
+          <Alert severity="error">无法连接服务器</Alert>
         )}
         {!!messages.length && (
           <ErrorBoundary>

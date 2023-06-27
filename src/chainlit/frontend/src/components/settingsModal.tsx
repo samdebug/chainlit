@@ -31,13 +31,13 @@ export default function SettingsModal() {
       <DialogContent>
         <List
           sx={{ width: '100%', maxWidth: 360 }}
-          subheader={<ListSubheader>Settings</ListSubheader>}
+          subheader={<ListSubheader>设置</ListSubheader>}
         >
           <ListItem>
             <ListItemIcon>
               <ExpandIcon />
             </ListItemIcon>
-            <ListItemText id="switch-expand-all" primary="Expand Messages" />
+            <ListItemText id="switch-expand-all" primary="展开消息" />
             <Switch
               edge="end"
               onChange={() =>
@@ -53,7 +53,7 @@ export default function SettingsModal() {
             <ListItemIcon>
               <EmojiObjectsIcon />
             </ListItemIcon>
-            <ListItemText id="hide-cot" primary="Hide Chain of Thought" />
+            <ListItemText id="hide-cot" primary="隐藏思维链" />
             <Switch
               edge="end"
               onChange={() =>
@@ -69,7 +69,7 @@ export default function SettingsModal() {
             <ListItemIcon>
               <DarkModeOutlined />
             </ListItemIcon>
-            <ListItemText id="switch-theme" primary="Dark mode" />
+            <ListItemText id="switch-theme" primary="深色模式" />
             <Switch
               edge="end"
               onChange={() => {

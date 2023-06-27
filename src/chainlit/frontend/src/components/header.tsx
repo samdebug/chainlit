@@ -73,14 +73,14 @@ function Nav({ isPublic, hasReadme }: NavProps) {
 
   const matches = useMediaQuery(theme.breakpoints.down('md'));
 
-  const tabs = [{ to: '/', label: 'Chat' }];
+  const tabs = [{ to: '/', label: '聊天' }];
 
   if (isPublic === false) {
-    tabs.push({ to: '/dataset', label: 'History' });
+    tabs.push({ to: '/dataset', label: '历史' });
   }
 
   if (hasReadme) {
-    tabs.push({ to: '/readme', label: 'Readme' });
+    tabs.push({ to: '/readme', label: '首页' });
   }
 
   const nav = (

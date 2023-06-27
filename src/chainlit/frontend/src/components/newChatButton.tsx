@@ -38,7 +38,7 @@ export default function NewChatButton() {
         onClick={handleClickOpen}
         startIcon={<AddIcon />}
       >
-        New Chat
+        新增聊天
       </AccentButton>
       <Dialog
         open={open}
@@ -51,22 +51,22 @@ export default function NewChatButton() {
         }}
       >
         <DialogTitle id="alert-dialog-title">
-          {'Create a new chat?'}
+          {'创建一个新的聊天?'}
         </DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-description">
-            This will clear the current messages and start a new chat.
+            此操作会清除当前的聊天，并创建一个新的聊天，是否确认？
           </DialogContentText>
         </DialogContent>
         <DialogActions sx={{ p: 2 }}>
-          <RegularButton onClick={handleClose}>Cancel</RegularButton>
+          <RegularButton onClick={handleClose}>取消</RegularButton>
           <AccentButton
             id="confirm"
             variant="outlined"
             onClick={handleConfirm}
             autoFocus
           >
-            Confirm
+            确认
           </AccentButton>
         </DialogActions>
       </Dialog>

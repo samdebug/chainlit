@@ -64,9 +64,12 @@ export default function HistoryButton({ onClick, onOpen, chats }: Props) {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
 
   useEffect(() => {
+    setAnchorEl(ref.current);
+  }, []);
+
+  useEffect(() => {
     if (open) {
       if (ref.current) {
-        setAnchorEl(ref.current);
         onOpen();
       }
     }
@@ -86,7 +89,7 @@ export default function HistoryButton({ onClick, onOpen, chats }: Props) {
         color="text.primary"
         sx={{ fontSize: '14px', fontWeight: 700 }}
       >
-        Last messages
+        提问历史
       </Typography>
       <SearchOutlined />
     </Stack>
@@ -105,7 +108,7 @@ export default function HistoryButton({ onClick, onOpen, chats }: Props) {
             textTransform: 'uppercase'
           }}
         >
-          Such empty...
+          暂无历史...
         </Typography>
       </div>
     ) : null;
@@ -122,7 +125,7 @@ export default function HistoryButton({ onClick, onOpen, chats }: Props) {
           textTransform: 'uppercase'
         }}
       >
-        Loading...
+        加载中...
       </Typography>
     </div>
   ) : null;
@@ -227,7 +230,7 @@ export default function HistoryButton({ onClick, onOpen, chats }: Props) {
   return (
     <div>
       {menu}
-      <Tooltip title="Show history">
+      <Tooltip title="展示提问历史">
         <IconButton color="inherit" onClick={() => setOpen(!open)} ref={ref}>
           <KeyboardDoubleArrowUpIcon />
         </IconButton>
